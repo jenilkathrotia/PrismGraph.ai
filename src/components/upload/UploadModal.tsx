@@ -48,23 +48,33 @@ export default function UploadModal({ onClose, onComplete }: UploadModalProps) {
     formData.append('file', file);
 
     try {
-      // Simulate multi-stage progress
-      setTimeout(() => setState('extracting'), 800);
-      setTimeout(() => setState('building'), 2000);
-
-      const res = await fetch('/api/upload', {
+      setState('uploading');
+      
+      // Cinematic demo delays to ensure the user sees the pipeline stages
+      await new Promise(r => setTimeout(r, 800));
+      setState('extracting');
+      
+      // Start the actual fetch
+      const fetchPromise = fetch('/api/upload', {
         method: 'POST',
         body: formData,
       });
 
+      await new Promise(r => setTimeout(r, 1200));
+      setState('building');
+      
+      const res = await fetchPromise;
       const data = await res.json();
+
+      // Guarantee 'building' stage is visible briefly if fetch was instantly mocked
+      await new Promise(r => setTimeout(r, 1000));
 
       if (data.success) {
         setState('complete');
         if (data.extraction) {
           setExtractionPreview(data.extraction as Record<string, unknown>);
         }
-        setTimeout(onComplete, 1500);
+        setTimeout(onComplete, 1800);
       } else {
         setState('error');
         setError(data.error || 'Upload failed');
