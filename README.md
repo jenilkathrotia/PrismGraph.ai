@@ -1,14 +1,14 @@
-# ResearchGraph AI
+# PrismGraph.ai
 
 **A cinematic AI research command center powered by Neo4j and RocketRide AI.**
 
-ResearchGraph AI transforms static research PDFs into a living, queryable knowledge graph. Instead of just "chatting with an AI," this platform semantically extracts entities, authors, methods, datasets, and claims, mapping them natively into Neo4j. The RocketRide AI agent then synthesizes answers by traversing this graph, backing up every claim with verifiable evidence and confidence scoring.
+PrismGraph.ai transforms static research PDFs into a living, queryable knowledge graph. Instead of just "chatting with an AI," this platform semantically extracts entities, authors, methods, datasets, and claims, mapping them natively into Neo4j. The RocketRide AI agent then synthesizes answers by traversing this graph, backing up every claim with verifiable evidence and confidence scoring.
 
 Built for the **Neo4j + RocketRide AI Hackathon**.
 
 ## 🎬 The Demo Story (Live Script)
 
-To experience the full capability of ResearchGraph AI, follow this exact end-to-end demo path:
+To experience the full capability of PrismGraph.ai, follow this exact end-to-end demo path:
 
 1. **The Grand Entrance**
    - Open `http://localhost:3000`. You'll see the animated graph particle background and the premium dark-mode cinematic hero section.

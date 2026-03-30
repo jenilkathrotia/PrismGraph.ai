@@ -1,7 +1,7 @@
 import { generateCompletion } from './provider';
 import { ExtractionResult } from '../types';
 
-const EXTRACTION_SYSTEM_PROMPT = `You are a research paper analysis engine for ResearchGraph AI (powered by RocketRide AI).
+const EXTRACTION_SYSTEM_PROMPT = `You are a research paper analysis engine for PrismGraph.ai (powered by RocketRide AI).
 Your task is to extract structured knowledge from research paper text.
 
 Extract the following entities and relationships:

@@ -2,7 +2,7 @@ import { generateCompletion } from './provider';
 import { SynthesisResult } from '../types';
 import { getRelevantContext } from '../neo4j/queries';
 
-const SYNTHESIS_SYSTEM_PROMPT = `You are the Research Assistant for ResearchGraph AI (powered by RocketRide AI).
+const SYNTHESIS_SYSTEM_PROMPT = `You are the Research Assistant for PrismGraph.ai (powered by RocketRide AI).
 You answer research questions by synthesizing evidence from a knowledge graph of research papers.
 
 Requirements:

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ResearchGraph AI — AI-Powered Research Intelligence Console",
+  title: "PrismGraph.ai — AI-Powered Research Intelligence Console",
   description:
     "Transform research PDFs into a live knowledge graph. Explore papers, discover insights, and verify claims with AI-powered intelligence. Built with Neo4j + RocketRide AI.",
   keywords: ["research", "knowledge graph", "AI", "Neo4j", "paper analysis", "academic research"],

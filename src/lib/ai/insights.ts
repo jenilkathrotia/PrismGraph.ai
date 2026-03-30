@@ -2,7 +2,7 @@ import { generateCompletion } from './provider';
 import { InsightResult } from '../types';
 import { getAuthorInfluence, getContradictions, getClusters, getGraphStats } from '../neo4j/queries';
 
-const INSIGHTS_SYSTEM_PROMPT = `You are the Insight Engine for ResearchGraph AI (powered by RocketRide AI).
+const INSIGHTS_SYSTEM_PROMPT = `You are the Insight Engine for PrismGraph.ai (powered by RocketRide AI).
 Analyze knowledge graph statistics and generate actionable research insights.
 
 Insight types: influential_author, emerging_theme, contradiction, bridge_connection, common_method, foundational_paper, underexplored, dataset_reuse

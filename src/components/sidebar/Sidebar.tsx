@@ -48,8 +48,8 @@ export default function Sidebar({
           <Network className="w-4 h-4 text-white" />
         </div>
         <div>
-          <span className="text-sm font-bold text-white">ResearchGraph</span>
-          <span className="text-xs font-medium ml-1" style={{ color: 'var(--accent-cyan)' }}>AI</span>
+          <span className="text-sm font-bold text-white">PrismGraph</span>
+          <span className="text-xs font-medium ml-0.5" style={{ color: 'var(--accent-cyan)' }}>.ai</span>
         </div>
       </Link>
 

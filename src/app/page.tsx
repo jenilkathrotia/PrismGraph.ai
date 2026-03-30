@@ -168,7 +168,7 @@ export default function LandingPage() {
           <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #00e5ff, #7c4dff)' }}>
             <Network className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold text-white">ResearchGraph <span className="text-sm font-medium" style={{ color: 'var(--accent-cyan)' }}>AI</span></span>
+          <span className="text-xl font-bold text-white">PrismGraph<span className="text-sm font-medium" style={{ color: 'var(--accent-cyan)' }}>.ai</span></span>
         </div>
         <div className="flex items-center gap-4">
           <Link
@@ -366,7 +366,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="relative z-10 px-8 py-8 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
-        <p>ResearchGraph AI — Built with Neo4j + RocketRide AI</p>
+        <p>PrismGraph.ai — Built with Neo4j + RocketRide AI</p>
       </footer>
     </div>
   );

@@ -1,5 +1,5 @@
 // ============================================================
-// ResearchGraph AI - Core Type Definitions
+// PrismGraph.ai - Core Type Definitions
 // ============================================================
 
 // ---- Graph Node Types ----
