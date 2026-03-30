@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0a0b14;
+  --bg-secondary: #111227;
+  --bg-tertiary: #1a1b3a;
+  --bg-card: rgba(17, 18, 39, 0.85);
+  --bg-glass: rgba(17, 18, 39, 0.6);
+  --text-primary: #e8eaf6;
+  --text-secondary: #9fa8da;
+  --text-muted: #5c6bc0;
+  --accent-cyan: #00e5ff;
+  --accent-violet: #7c4dff;
+  --accent-emerald: #00e676;
+  --accent-amber: #ffab40;
+  --accent-rose: #ff5252;
+  --accent-blue: #448aff;
+  --glow-cyan: rgba(0, 229, 255, 0.3);
+  --glow-violet: rgba(124, 77, 255, 0.3);
+  --border-subtle: rgba(99, 102, 241, 0.15);
+  --border-accent: rgba(0, 229, 255, 0.25);
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-tertiary) transparent;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+}
+
+.glass-card-sm {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px var(--glow-cyan), 0 0 60px rgba(0, 229, 255, 0.1);
+}
+
+.glow-violet {
+  box-shadow: 0 0 20px var(--glow-violet), 0 0 60px rgba(124, 77, 255, 0.1);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 20px var(--glow-cyan);
+}
+
+.glow-text-violet {
+  text-shadow: 0 0 20px var(--glow-violet);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-violet) 50%, var(--accent-emerald) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-hero {
+  background: linear-gradient(135deg, #00e5ff 0%, #7c4dff 40%, #ff5252 70%, #ffab40 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient bg */
+.gradient-bg-animated {
+  background: linear-gradient(-45deg, #0a0b14, #111227, #1a1040, #0a1628);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Node type colors */
+.node-paper { background: #448aff; box-shadow: 0 0 12px rgba(68, 138, 255, 0.4); }
+.node-author { background: #00e676; box-shadow: 0 0 12px rgba(0, 230, 118, 0.4); }
+.node-topic { background: #7c4dff; box-shadow: 0 0 12px rgba(124, 77, 255, 0.4); }
+.node-method { background: #ffab40; box-shadow: 0 0 12px rgba(255, 171, 64, 0.4); }
+.node-claim { background: #ff5252; box-shadow: 0 0 12px rgba(255, 82, 82, 0.4); }
+.node-dataset { background: #ffd740; box-shadow: 0 0 12px rgba(255, 215, 64, 0.4); }
+.node-venue { background: #00e5ff; box-shadow: 0 0 12px rgba(0, 229, 255, 0.4); }
+.node-institution { background: #ff4081; box-shadow: 0 0 12px rgba(255, 64, 129, 0.4); }
+.node-cluster { background: #536dfe; box-shadow: 0 0 12px rgba(83, 109, 254, 0.4); }
+.node-keyword { background: #78909c; box-shadow: 0 0 12px rgba(120, 144, 156, 0.4); }
+
+/* Pulse animation */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Particle animation for landing page */
+@keyframes particle-drift {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  50% { transform: translate(30px, -30px) scale(1.2); opacity: 0.3; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+}
+
+/* Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Evidence type colors */
+.evidence-supports { border-left: 3px solid var(--accent-emerald); }
+.evidence-contradicts { border-left: 3px solid var(--accent-rose); }
+.evidence-neutral { border-left: 3px solid var(--text-muted); }
+
+/* Confidence badge colors */
+.confidence-high { background: rgba(0, 230, 118, 0.15); color: var(--accent-emerald); border: 1px solid rgba(0, 230, 118, 0.3); }
+.confidence-medium { background: rgba(255, 171, 64, 0.15); color: var(--accent-amber); border: 1px solid rgba(255, 171, 64, 0.3); }
+.confidence-low { background: rgba(255, 82, 82, 0.15); color: var(--accent-rose); border: 1px solid rgba(255, 82, 82, 0.3); }
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bg-tertiary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* React Flow customization */
+.react-flow__node {
+  cursor: pointer;
+}
+.react-flow__edge-path {
+  stroke: rgba(99, 102, 241, 0.4) !important;
+  stroke-width: 1.5 !important;
+}
+.react-flow__background {
+  background: var(--bg-primary) !important;
+}
+.react-flow__controls {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 8px !important;
+}
+.react-flow__controls-button {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+  fill: var(--text-secondary) !important;
+}
+.react-flow__controls-button:hover {
+  background: var(--bg-tertiary) !important;
+}
+.react-flow__minimap {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 8px !important;
+}
+
+/* Transition utility */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
